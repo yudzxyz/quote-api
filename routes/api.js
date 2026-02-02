@@ -9,6 +9,6 @@ const apiHandle = async (ctx) => {
   ctx.result = await method(methodWithExt ? methodWithExt[1] : ctx.params[0], ctx.props)
 }
 
-api.post('/', apiHandle)
+api.post('/*', apiHandle)
 
 module.exports = api
